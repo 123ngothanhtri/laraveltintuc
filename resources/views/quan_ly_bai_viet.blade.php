@@ -54,7 +54,7 @@
                 </td>
                 
                 <td class="p-2 border">
-                    {{ $t->created_at }}
+                    {{ $t->ngaythem_baiviet }}
                 </td>
                 <td class="p-2 border">
                     <a href="{{ url('sua-bai-viet/'.$t->id_baiviet) }}" > <button class="bg-gray-100 p-1 rounded-lg outline-none border-none hover:bg-blue-200 ring-none text-blue-500">Chi tiết</button> </a>

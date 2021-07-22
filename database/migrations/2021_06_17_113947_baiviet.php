@@ -16,8 +16,8 @@ class Baiviet extends Migration
         Schema::create('baiviet', function (Blueprint $table) {
             $table->id('id_baiviet');
             $table->string('tieude_baiviet');
-            $table->string('mota_baiviet');
-            $table->text('noidung_baiviet');
+            $table->string('mota_baiviet')->nullable();
+            $table->text('noidung_baiviet')->nullable();
             $table->string('hinhanh_baiviet');
             $table->boolean('noibat_baiviet')->nullable();
             $table->boolean('anhien_baiviet')->nullable();

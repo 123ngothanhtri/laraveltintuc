@@ -19,7 +19,7 @@
                 </select>
                 
                 <label for="" >Mô tả</label>
-                <textarea name="input_mota" placeholder="Mô tả" class="bg-white w-full h-20 block focus:outline-none focus:ring-1 md:col-span-2 px-2 py-1 rounded-lg border"></textarea>
+                <textarea name="input_mota" placeholder="Mô tả" required class="bg-white w-full h-20 block focus:outline-none focus:ring-1 md:col-span-2 px-2 py-1 rounded-lg border"></textarea>
                 
                 <label for="">Chọn hình ảnh</label>
                 <span>
