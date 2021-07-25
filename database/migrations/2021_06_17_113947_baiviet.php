@@ -23,9 +23,9 @@ class Baiviet extends Migration
             $table->boolean('anhien_baiviet')->nullable();
             $table->integer('luotxem_baiviet')->default('0');
             $table->date('ngaythem_baiviet');
-            $table->bigInteger('id_loaibaiviet');
+            $table->unsignedBigInteger('id_loaibaiviet');
 
-            $table->foreign('id_baiviet')->references('id_loaibaiviet')->on('loaibaiviet');
+            $table->foreign('id_loaibaiviet')->references('id_loaibaiviet')->on('loaibaiviet');
         });
     }
 

@@ -18,7 +18,9 @@ class Binhluan extends Migration
             $table->string('ten_binhluan');
             $table->string('noidung_binhluan');
             $table->date('ngay_binhluan');
-            $table->bigInteger('id_baiviet');
+            $table->unsignedBigInteger('id_baiviet');
+
+            $table->foreign('id_baiviet')->references('id_baiviet')->on('baiviet');
         });
     }
 
