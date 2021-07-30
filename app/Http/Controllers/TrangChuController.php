@@ -13,6 +13,7 @@ class TrangChuController extends Controller
     function trangchu(){
         $tt=BaiViet::orderBy('id_baiviet', 'desc')->get();
         $lt=LoaiBaiViet::all();
+        
         return view('home.trang_chu',compact('tt','lt'));
     }
     function chitietbaiviet($id){
@@ -54,7 +55,8 @@ class TrangChuController extends Controller
     function loc($id){
         $tt=BaiViet::orderBy('id_baiviet', 'desc')->where('id_loaibaiviet',$id)->get();
         $lt=LoaiBaiViet::all();
-        return view('home.trang_chu',compact('tt','lt'));
+        $xn=$id;
+        return view('home.trang_chu',compact('tt','lt','xn'));
     }
     function timkiembaiviet(Request $r){
         $tukhoa=$r->tktt;

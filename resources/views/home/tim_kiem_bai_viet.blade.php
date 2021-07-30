@@ -10,7 +10,7 @@
     }
     @endphp
     <form action="{{ url('tim-kiem-bai-viet') }}" method="post" class="mb-1">@csrf
-        <input type="text" placeholder="Nhập từ khóa tìm kiếm" name="tktt" required class="border w-96 outline-none rounded-lg py-2 px-4">
+        <input type="text" placeholder="Nhập từ khóa tìm kiếm" name="tktt" value="{{ $tukhoa }}" required class="border w-96 outline-none rounded-lg py-2 px-4">
         <input type="submit" value="Tìm kiếm" class="border cursor-pointer outline-none hover:bg-green-50 rounded-lg py-2 px-4">
     </form>
     <div class="w-10/12 flex flex-col lg:flex-row">

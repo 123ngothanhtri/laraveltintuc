@@ -9,7 +9,29 @@
     </form>
     <hr>
     <div class="w-10/12 flex flex-col lg:flex-row mt-2">
+        
         <div>
+            @foreach ($lt as $t)
+                <a href="{{ url('loc/' . $t->id_loaibaiviet) }}">
+                <div 
+                @if (isset($xn))  
+                    @if ($xn==$t->id_loaibaiviet)
+                        class="w-40  bg-green-200 ml-5 border-gray-200 font-bold  px-5 py-2" 
+                    @else
+                        class="w-40 hover:bg-green-50 ml-5 border-gray-200 font-bold  px-5 py-2"  
+                    @endif
+                @else
+                        class="w-40 hover:bg-green-50 ml-5 border-gray-200 font-bold  px-5 py-2" 
+                @endif
+
+                >
+                        {{ $t->ten_loaibaiviet }}
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
+        <div class="pl-5">
             @foreach ($tt as $t)
                 @if ($t->anhien_baiviet == 1)
                     <a href="{{ url('chi-tiet-bai-viet/' . $t->id_baiviet) }}">
@@ -23,7 +45,7 @@
                                     <img src="{{ asset('storage/' . $t->hinhanh_baiviet) }}" alt="" class="h-full w-full object-cover ">
                                 </div>
                             </div>
-                            <div class="px-3 class=" >
+                            <div class="px-3 class=">
                                 <p>{{ $t->mota_baiviet }}</p>
                             </div>
                         </div>
@@ -31,19 +53,12 @@
                     <hr>
                 @endif
             @endforeach
-            </div>
-
-            <div>
-            @foreach ($lt as $t)
-                <a href="{{ url('loc/' . $t->id_loaibaiviet) }}">
-                    <div class="w-40 hover:bg-green-50 ml-5 border-l border-gray-200 font-bold  px-5 py-2">
-                        {{ $t->ten_loaibaiviet }}
-                    </div>
-                </a>
-            @endforeach
         </div>
+
+
     </div>
     <html>
-<head>
 
-@endsection
+    <head>
+
+    @endsection

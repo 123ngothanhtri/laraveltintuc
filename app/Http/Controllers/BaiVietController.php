@@ -72,7 +72,7 @@ class BaiVietController extends Controller
 
         
         $them->noidung_baiviet=$r->editor;
-        //$them->id_loaiti=$r->input_loaiti;
+        $them->id_loaibaiviet=$r->input_loaibaiviet;
         
         $them->save();
         
